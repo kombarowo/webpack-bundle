@@ -24,7 +24,7 @@ export default function scrollAnimate() {
 
         if ((pageYOffset > itemOffset.top - animStartPoint) && pageYOffset < (itemOffset.top + itemHeight)) {
           item.classList.add(animClass);
-          item.style.animationDelay = `${animDelay}s`;
+          item.style.animationDelay = `${animDelay}`;
         } else {
           if (animRepeat !== 'once') {
             item.classList.remove(animClass);
