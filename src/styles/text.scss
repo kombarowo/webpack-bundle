@@ -1,0 +1,40 @@
+.text {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1em;
+  text-decoration: none;
+  font-weight: 400;
+  color: #000;
+  cursor: default;
+
+  padding: 0;
+  margin: 0;
+
+  &-weight--700 {
+    font-weight: 700;
+  }
+
+  &-color--1 {
+    color: #ffffff;
+  }
+
+  &--ls {
+    letter-spacing: 0.5em;
+  }
+
+  &--upper {
+    text-transform: uppercase;
+  }
+}
+
+@media (min-width: 1024px) {
+  .text {
+    &--link {
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
