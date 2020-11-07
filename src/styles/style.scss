@@ -1,6 +1,11 @@
 @import '~normalize.css';
 @import "vars";
 @import "mixins";
+@import "animate";
 @import "fonts";
 @import "icon";
 @import "button";
+
+body {
+  height: 3000px;
+}
