@@ -1,9 +1,23 @@
 .icon {
   cursor: default;
+  fill: #000000;
 
   &--cross {
     width: 25px;
     height: 25px;
     fill: #000000;
+  }
+
+  &--arrow {
+    width: 15px;
+    height: 15px;
+  }
+
+  &--arrow-up {
+    transform: rotate(180deg);
+  }
+
+  &--color-1 {
+    fill: #ffffff;
   }
 }
