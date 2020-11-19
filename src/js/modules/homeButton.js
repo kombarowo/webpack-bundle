@@ -1,14 +1,14 @@
 export default function initHomeButton(btnClass) {
-  const button = document.querySelector(btnClass);
+  const button = s(btnClass);
   toggleButton();
 
   window.addEventListener('scroll', toggleButton);
 
   function toggleButton() {
     if (pageYOffset > window.innerHeight) {
-      button.classList.remove('hide');
+      button.show();
     } else {
-      button.classList.add('hide');
+      button.hide();
     }
   }
 }
