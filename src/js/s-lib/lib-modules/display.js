@@ -1,5 +1,6 @@
 import s from '../core';
 
+//show & hide
 s.prototype.show = function () {
   for (let i = 0; i < this.length; i++) {
     this[i].classList.remove('hide');
@@ -29,22 +30,17 @@ s.prototype.toggle = function () {
 }
 
 //fade
-
 s.prototype.fadeIn = function () {
   for (let i = 0; i < this.length; i++) {
-    this[i].classList.remove('fadeOut');
-    this[i].classList.add('fadeIn');
+    fadeIn(this[i]);
   }
-
   return this;
 }
 
 s.prototype.fadeOut = function () {
   for (let i = 0; i < this.length; i++) {
-    this[i].classList.remove('fadeIn');
-    this[i].classList.add('fadeOut');
+    fadeOut(this[i]);
   }
-
   return this;
 }
 
@@ -53,65 +49,67 @@ s.prototype.fadeToggle = function () {
     if (!this[i].classList.contains('fadeIn') && !this[i].classList.contains('fadeOut')) {
       this[i].classList.add('fadeOut');
     } else if (this[i].classList.contains('fadeIn')) {
-      this[i].classList.remove('fadeIn');
-      this[i].classList.add('fadeOut');
+      fadeOut(this[i]);
     } else if (this[i].classList.contains('fadeOut')) {
-      this[i].classList.remove('fadeOut');
-      this[i].classList.add('fadeIn');
+      fadeIn(this[i]);
     }
   }
-
   return this;
+}
+
+function fadeIn(item) {
+  item.classList.remove('fadeOut');
+  item.classList.add('fadeIn');
+}
+
+function fadeOut(item) {
+  item.classList.remove('fadeIn');
+  item.classList.add('fadeOut');
 }
 
 //slide
 
 s.prototype.slideIn = function () {
   for (let i = 0; i < this.length; i++) {
-    this[i].style.maxHeight = this[i].dataset.maxHeight;
-    this[i].style.margin = this[i].dataset.margin;
-    this[i].style.padding = this[i].dataset.padding;
-    this[i].style.border = this[i].dataset.border;
+    slideIn(this[i]);
   }
 }
 
 s.prototype.slideOut = function () {
   for (let i = 0; i < this.length; i++) {
-    if (this[i].style.maxHeight !== '0px') {
-      this[i].style.maxHeight = this[i].offsetHeight + 'px';
-      this[i].dataset.maxHeight = getComputedStyle(this[i]).maxHeight;
-      this[i].dataset.border = getComputedStyle(this[i]).border;
-      this[i].dataset.margin = getComputedStyle(this[i]).margin;
-      this[i].dataset.padding = getComputedStyle(this[i]).padding;
-      setTimeout(() => {
-        this[i].style.maxHeight = '0';
-        this[i].style.margin = '0';
-        this[i].style.padding = '0';
-        this[i].style.border = '0px solid transparent';
-      }, 0);
-    }
+    slideOut(this[i]);
   }
 }
 
 s.prototype.slideToggle = function () {
   for (let i = 0; i < this.length; i++) {
-    if (this[i].style.maxHeight !== '0px') {
-      this[i].style.maxHeight = this[i].offsetHeight + 'px';
-      this[i].dataset.maxHeight = getComputedStyle(this[i]).maxHeight;
-      this[i].dataset.border = getComputedStyle(this[i]).border;
-      this[i].dataset.margin = getComputedStyle(this[i]).margin;
-      this[i].dataset.padding = getComputedStyle(this[i]).padding;
-      setTimeout(() => {
-        this[i].style.maxHeight = '0';
-        this[i].style.margin = '0';
-        this[i].style.padding = '0';
-        this[i].style.border = '0px solid transparent';
-      }, 0);
+    if (this[i].style.maxHeight === '0px') {
+      slideIn(this[i]);
     } else {
-      this[i].style.maxHeight = this[i].dataset.maxHeight;
-      this[i].style.margin = this[i].dataset.margin;
-      this[i].style.padding = this[i].dataset.padding;
-      this[i].style.border = this[i].dataset.border;
+      slideOut(this[i]);
     }
+  }
+}
+
+function slideIn(item) {
+  item.style.maxHeight = item.dataset.maxHeight;
+  item.style.margin = item.dataset.margin;
+  item.style.padding = item.dataset.padding;
+  item.style.border = item.dataset.border;
+}
+
+function slideOut(item) {
+  if (item.style.maxHeight !== '0px') {
+    item.style.maxHeight = item.offsetHeight + 'px';
+    item.dataset.maxHeight = getComputedStyle(item).maxHeight;
+    item.dataset.border = getComputedStyle(item).border;
+    item.dataset.margin = getComputedStyle(item).margin;
+    item.dataset.padding = getComputedStyle(item).padding;
+    setTimeout(() => {
+      item.style.maxHeight = '0';
+      item.style.margin = '0';
+      item.style.padding = '0';
+      item.style.border = '0px solid transparent';
+    }, 0);
   }
 }

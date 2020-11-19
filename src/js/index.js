@@ -12,14 +12,14 @@ window.addEventListener('DOMContentLoaded', function () {
   initHomeButton('.button--to-home');
 
   //test requesting
-  new Request('https://jsonplaceholder.typicode.com/todos/1')
-    .getData()
-    .then(resp => resp.json())
-    .then(json => console.log(json));
+  // new Request('https://jsonplaceholder.typicode.com/todos/1')
+  //   .getData()
+  //   .then(resp => resp.json())
+  //   .then(json => console.log(json));
 
-  new Request('https://jsonplaceholder.typicode.com/posts/')
-    .postData({title: 'Helloo!!!!'}, 'json')
-    .then(resp => resp.json())
-    .then(json => console.log(json));
+  // new Request('https://jsonplaceholder.typicode.com/posts/')
+  //   .postData({title: 'Helloo!!!!'}, 'json')
+  //   .then(resp => resp.json())
+  //   .then(json => console.log(json));
 });
 
