@@ -7,5 +7,5 @@ import initHomeButton from "./modules/homeButton";
 window.addEventListener('DOMContentLoaded', function () {
   scrollAnimate();
   initAnchors();
-  initHomeButton('.button--home');
+  initHomeButton('.button--to-home');
 })
