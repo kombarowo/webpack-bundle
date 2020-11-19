@@ -33,3 +33,19 @@ s.prototype.fadeOut = function () {
 
   return this;
 }
+
+s.prototype.fadeToggle = function () {
+  for (let i = 0; i < this.length; i++) {
+    if (!this[i].classList.contains('fadeIn') && !this[i].classList.contains('fadeOut')) {
+      this[i].classList.add('fadeOut');
+    } else if (this[i].classList.contains('fadeIn')) {
+      this[i].classList.remove('fadeIn');
+      this[i].classList.add('fadeOut');
+    } else if (this[i].classList.contains('fadeOut')) {
+      this[i].classList.remove('fadeOut');
+      this[i].classList.add('fadeIn');
+    }
+  }
+
+  return this;
+}
