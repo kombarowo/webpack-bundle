@@ -2,7 +2,7 @@ import s from '../core';
 
 s.prototype.hide = function () {
   for (let i = 0; i < this.length; i++) {
-    this[i].style.display = 'none';
+    this[i].classList.add('hide');
   }
 
   return this;
@@ -10,7 +10,25 @@ s.prototype.hide = function () {
 
 s.prototype.show = function () {
   for (let i = 0; i < this.length; i++) {
-    this[i].style.display = '';
+    this[i].classList.remove('hide');
+  }
+
+  return this;
+}
+
+s.prototype.fadeIn = function () {
+  for (let i = 0; i < this.length; i++) {
+    this[i].classList.remove('fadeOut');
+    this[i].classList.add('fadeIn');
+  }
+
+  return this;
+}
+
+s.prototype.fadeOut = function () {
+  for (let i = 0; i < this.length; i++) {
+    this[i].classList.remove('fadeIn');
+    this[i].classList.add('fadeOut');
   }
 
   return this;

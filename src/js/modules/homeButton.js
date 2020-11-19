@@ -6,9 +6,9 @@ export default function initHomeButton(btnClass) {
 
   function toggleButton() {
     if (pageYOffset > window.innerHeight) {
-      button.show();
+      button.fadeIn();
     } else {
-      button.hide();
+      button.fadeOut();
     }
   }
 }
