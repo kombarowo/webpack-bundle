@@ -1,22 +1,24 @@
 .icon {
   fill: #000000;
 
-  &--cross {
-    width: 25px;
-    height: 25px;
-    fill: #000000;
-  }
-
-  &--arrow {
+  &_size_15 {
     width: 15px;
     height: 15px;
   }
 
-  &--arrow-up {
+  &_arrow_left {
+    transform: rotate(90deg);
+  }
+
+  &_arrow_up {
     transform: rotate(180deg);
   }
 
-  &--color-1 {
+  &_arrow_right {
+    transform: rotate(270deg);
+  }
+
+  &_color_1 {
     fill: #ffffff;
   }
 }
