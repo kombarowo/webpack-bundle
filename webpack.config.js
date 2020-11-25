@@ -99,12 +99,12 @@ module.exports = {
         },
       ]
     }),
-    new ImageminPlugin({
-      pngquant: ({quality: 50}),
-      plugins: [
-        imageminMozjpeg({quality: 50})
-      ]
-    }),
+    // new ImageminPlugin({
+    //   pngquant: ({quality: 90}),
+    //   plugins: [
+    //     imageminMozjpeg({quality: 90})
+    //   ]
+    // }),
     new SpriteLoaderPlugin()
   ]
 }

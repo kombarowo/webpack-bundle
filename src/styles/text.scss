@@ -4,26 +4,25 @@
   line-height: 1em;
   text-decoration: none;
   font-weight: 400;
-  color: #000;
-  cursor: default;
+  color: $color1;
 
   padding: 0;
   margin: 0;
 
-  &-weight--700 {
+  &_weight_700 {
     font-weight: 700;
   }
 
-  &-color--1 {
-    color: #ffffff;
-  }
-
-  &--ls {
-    letter-spacing: 0.5em;
+  &_color_2 {
+    color: $color2;
   }
 
   &--upper {
     text-transform: uppercase;
+  }
+
+  &--link {
+    cursor: default;
   }
 }
 
@@ -31,10 +30,10 @@
   .text {
     &--link {
       cursor: pointer;
+    }
 
-      &:hover {
-        text-decoration: underline;
-      }
+    &--link:hover {
+      text-decoration: underline;
     }
   }
 }

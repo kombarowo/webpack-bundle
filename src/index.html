@@ -9,14 +9,16 @@
 </head>
 
 <body>
-<h1 class="home text text-weight--700" style="font-size: 50px" data-type="123">Hello, world!</h1>
+<h1 class="home text text-weight--700 anim" data-anim="fadeInUp" style="font-size: 50px" data-type="123">
+  Hello, world!
+</h1>
 
 <!--example of using svg-->
-<svg class="icon icon_size_15">
+<svg class="icon icon_size_1">
   <use href="#_sprite_cross"></use>
 </svg>
 
-<svg class="icon icon_size_15 icon_arrow_right">
+<svg class="icon icon_size_1 icon_arrow_right">
   <use href="#_sprite_arrow"></use>
 </svg>
 
@@ -24,7 +26,7 @@
 <button class="button">Click me</button>
 
 <!--example of animate-->
-<p class="anim" data-anim="fadeInLeft" style="width: 300px; margin: 25px auto">
+<p class="anim" data-anim="fadeInUp" style="width: 300px; margin: 25px auto">
   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto at cupiditate dolorum ducimus earum
   exercitationem neque numquam perspiciatis, quam voluptatum.
 </p>
@@ -44,7 +46,7 @@
 </p>
 
 <a href="#home" data-type="anchor" class="button button--to-home">
-  <svg class="icon icon_size_15 icon_arrow_up icon_color_1">
+  <svg class="icon icon_size_1 icon_arrow_up icon_color_1">
     <use href="#_sprite_arrow"></use>
   </svg>
 </a>

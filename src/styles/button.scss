@@ -9,10 +9,7 @@
   outline: none;
   border: 1px solid transparent;
   box-sizing: border-box;
-
-  &:active {
-    border: 1px solid black;
-  }
+  transition: opacity 0.3s;
 
   &--to-home {
     background: #000;
@@ -29,6 +26,7 @@
   .button {
     &:hover {
       cursor: pointer;
+      opacity: 0.8;
     }
   }
 }

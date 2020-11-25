@@ -1,7 +1,7 @@
 .icon {
-  fill: #000000;
+  fill: $color1;
 
-  &_size_15 {
+  &_size_1 {
     width: 15px;
     height: 15px;
   }
@@ -18,7 +18,7 @@
     transform: rotate(270deg);
   }
 
-  &_color_1 {
-    fill: #ffffff;
+  &_color_2 {
+    fill: $color2;
   }
 }

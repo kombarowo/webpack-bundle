@@ -1,5 +1,3 @@
-'use strict';
-
 const
   gulp = require('gulp'),
   fs = require('fs'),
@@ -36,7 +34,9 @@ function fontFamily(done) {
     })
   }
 }
-function cb() { }
+
+function cb() {
+}
 
 const build = gulp.series(fonts, fontFamily);
 
