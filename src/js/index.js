@@ -1,12 +1,15 @@
 import '../assets/_sprite.svg';
 import '../styles/style.scss';
 import './s-lib/lib';
+import './polyfills/forEach';
+import smoothscroll from 'smoothscroll-polyfill';
 import scrollAnimate from "./modules/scrollAnimate";
 import initAnchors from "./modules/anchors";
 import initHomeButton from "./modules/homeButton";
 import Request from "./services/request";
 
 window.addEventListener('DOMContentLoaded', function () {
+  smoothscroll.polyfill();
   scrollAnimate();
   initAnchors();
   initHomeButton('.button--to-home');
