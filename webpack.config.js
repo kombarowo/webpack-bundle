@@ -5,8 +5,6 @@ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
-const ImageminPlugin = require('imagemin-webpack-plugin').default;
-const imageminMozjpeg = require('imagemin-mozjpeg');
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 
 const isDev = process.env.NODE_ENV === 'development';
@@ -99,12 +97,6 @@ module.exports = {
         },
       ]
     }),
-    // new ImageminPlugin({
-    //   pngquant: ({quality: 90}),
-    //   plugins: [
-    //     imageminMozjpeg({quality: 90})
-    //   ]
-    // }),
     new SpriteLoaderPlugin()
   ]
 }

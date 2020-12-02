@@ -7,14 +7,3 @@
 @import "icon";
 @import "text";
 @import "button";
-
-.home {
-  box-sizing: border-box;
-  border: 5px solid red;
-
-  overflow: hidden;
-  transition: max-height 0.5s, border 0.5s, padding 0.5s, margin 0.5s;
-  padding-left: 10px;
-  padding-top: 10px;
-  margin-bottom: 20px;
-}

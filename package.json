@@ -35,8 +35,6 @@
     "gulp-ttf2woff": "^1.1.1",
     "gulp-ttf2woff2": "^3.0.0",
     "html-webpack-plugin": "^4.4.1",
-    "imagemin-mozjpeg": "^9.0.0",
-    "imagemin-webpack-plugin": "^2.4.2",
     "mini-css-extract-plugin": "^0.11.0",
     "postcss-loader": "^4.0.0",
     "resolve-url-loader": "^3.1.1",
