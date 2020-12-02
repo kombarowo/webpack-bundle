@@ -2,6 +2,10 @@
 
 My webpack bundle for frontend develop with native JS
 
+## What you need to start
+
+* Install nodejs.
+
 ## How to use gulp for fonts
 
 - Download your fonts, only .ttf format.
