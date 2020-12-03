@@ -1,8 +1,6 @@
 export default function initAnchors() {
   const items = document.querySelectorAll('[data-anchor]');
 
-  console.log(items);
-
   items.forEach(item => {
     item.addEventListener('click', function (e) {
       e.preventDefault();

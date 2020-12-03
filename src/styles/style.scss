@@ -7,3 +7,9 @@
 @import "icon";
 @import "text";
 @import "button";
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -81,3 +81,12 @@ For example, right-side arrow:
   Reset scroll to home
 </a>
 ````
+
+## For webp images
+
+````
+<picture>
+  <source srcset="image.webp" type="image/webp">
+  <img src="image.jpg|png alt="image">
+</picture>
+````
