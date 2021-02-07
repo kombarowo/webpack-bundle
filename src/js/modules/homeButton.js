@@ -1,14 +1,16 @@
-export default function initHomeButton(btnClass) {
-  const button = s(btnClass);
-  toggleButton();
+export default function initHomeButton(btnSelector) {
+  const button = document.querySelector(btnSelector)
+  toggleButton()
 
-  window.addEventListener('scroll', toggleButton);
+  window.addEventListener('scroll', toggleButton)
 
   function toggleButton() {
     if (pageYOffset > window.innerHeight) {
-      button.fadeIn();
+      button.classList.remove('fadeOut')
+      button.classList.add('fadeIn')
     } else {
-      button.fadeOut();
+      button.classList.remove('fadeIn')
+      button.classList.add('fadeOut')
     }
   }
 }
