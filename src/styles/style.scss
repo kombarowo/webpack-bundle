@@ -1,15 +1,9 @@
-@import '~normalize.css';
+@import "~normalize.css";
+@import "./b4-grid/grid.scss";
 @import "vars";
 @import "mixins";
 @import "animate";
-@import "display";
 @import "fonts";
-@import "icon";
-@import "text";
-@import "button";
-
-.flex {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+@import "./common/text.scss";
+@import "./common/svg.scss";
+@import "./common/button.scss";

@@ -12,7 +12,7 @@ window.addEventListener('DOMContentLoaded', function () {
   smoothscroll.polyfill()
   scrollAnimate()
   initAnchors()
-  initHomeButton('.button--to-home')
+  initHomeButton('.button-to-home')
 
   //test requesting
   // new Request('https://jsonplaceholder.typicode.com/todos/1')
@@ -25,4 +25,3 @@ window.addEventListener('DOMContentLoaded', function () {
   //   .then(resp => resp.json())
   //   .then(json => console.log(json))
 })
-
