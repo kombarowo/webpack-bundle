@@ -1,6 +1,5 @@
 import '../assets/_sprite.svg'
 import '../styles/style.scss'
-import './s-lib/lib'
 import './polyfills/forEach'
 import smoothscroll from 'smoothscroll-polyfill'
 import scrollAnimate from "./modules/scrollAnimate"
