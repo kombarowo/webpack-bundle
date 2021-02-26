@@ -1,5 +1,5 @@
 const path = require('path');
-const {CleanWebpackPlugin} = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
@@ -31,7 +31,7 @@ module.exports = {
 
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
-    port: 1337
+    port: 5050
   },
 
   module: {
@@ -53,7 +53,7 @@ module.exports = {
         test: /.s?css$/,
         use: [MiniCssExtractPlugin.loader, {
           loader: 'css-loader',
-          options: {url: false}
+          options: { url: false }
         }, 'postcss-loader', 'sass-loader'],
       },
       {
@@ -75,6 +75,13 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.pug$/,
+        loader: 'pug-loader',
+        options: {
+          pretty: true
+        }
+      }
     ]
   },
 
@@ -84,7 +91,7 @@ module.exports = {
       filename: 'css/style.[contenthash].css',
     }),
     new HtmlWebpackPlugin({
-      template: './src/index.html'
+      template: './src/index.pug'
     }),
     new CopyPlugin({
       patterns: [
