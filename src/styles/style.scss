@@ -1,9 +1,10 @@
 @import "~normalize.css";
+@import "./base/reset.scss";
 @import "./b4-grid/grid.scss";
-@import "vars";
-@import "mixins";
-@import "animate";
-@import "fonts";
+@import "./base/vars.scss";
+@import "./base/mixins.scss";
+@import "./base/fonts.scss";
+@import "./base/animate.scss";
 @import "./common/text.scss";
 @import "./common/svg.scss";
 @import "./common/button.scss";
