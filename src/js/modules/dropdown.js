@@ -19,8 +19,6 @@ export default class DropdownsBlock {
   }
 
   init() {
-    this.toggle = this.toggle.bind(this)
-
     this.$blocks.forEach(block => {
 
       const triggers = block.querySelectorAll(this.selectors.trigger)
