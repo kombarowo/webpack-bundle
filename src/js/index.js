@@ -6,6 +6,7 @@ import scrollAnimate from "./modules/scrollAnimate"
 import initAnchors from "./modules/anchors"
 import initHomeButton from "./modules/homeButton"
 import DropdownsBlock from './modules/dropdown';
+import Tabs from './modules/tabs'
 import Request from "./services/request"
 
 window.addEventListener('DOMContentLoaded', function () {
@@ -13,8 +14,6 @@ window.addEventListener('DOMContentLoaded', function () {
   scrollAnimate()
   initAnchors()
   initHomeButton('.button-to-home')
-
-  new DropdownsBlock({once: true})
 
   //test requesting
   // new Request('https://jsonplaceholder.typicode.com/todos/1')
